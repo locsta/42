@@ -6,7 +6,7 @@
 #    By: minizan <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/09 17:53:06 by minizan           #+#    #+#              #
-#    Updated: 2017/05/26 08:10:49 by minizan          ###   ########.fr        #
+#    Updated: 2017/05/27 07:04:47 by minizan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,6 @@ CFLAGS	= -Wall -Werror -Wextra
 SRC			= ft_atoi.c \
 			ft_bzero.c \
 			ft_countwords.c \
-			ft_delone.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isascii.c \
@@ -67,7 +66,7 @@ SRC			= ft_atoi.c \
 			ft_strmap.c \
 			ft_strmapi.c \
 			ft_strncat.c \
-			ft_strcmp.c \
+			ft_strncmp.c \
 			ft_strncpy.c \
 			ft_strnequ.c \
 			ft_strnew.c \

@@ -6,7 +6,7 @@
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/10 16:44:47 by minizan           #+#    #+#             */
-/*   Updated: 2017/05/10 17:15:14 by minizan          ###   ########.fr       */
+/*   Updated: 2017/05/26 16:11:19 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	ft_memdel(void **ap)
 {
 	if (ap == NULL || *ap == NULL)
-		return;
+		return ;
 	else
 	{
 		free(*ap);
