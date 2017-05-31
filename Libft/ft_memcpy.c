@@ -6,11 +6,11 @@
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/17 16:30:08 by minizan           #+#    #+#             */
-/*   Updated: 2017/05/17 16:30:33 by minizan          ###   ########.fr       */
+/*   Updated: 2017/05/31 13:52:10 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *s1, const void *s2, size_t n)
 {

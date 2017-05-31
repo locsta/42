@@ -6,7 +6,7 @@
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/16 10:41:53 by minizan           #+#    #+#             */
-/*   Updated: 2017/05/10 16:01:04 by minizan          ###   ########.fr       */
+/*   Updated: 2017/05/30 14:31:15 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,6 @@ int		ft_strcmp(const char *s1, const char *s2)
 		j++;
 	}
 	if (s1[i] != s2[j] && s1 != '\0')
-	{
-		return (s1[i] - s2[j]);
-	}
-	else
-	{
-		return (0);
-	}
+		return ((unsigned char)s1[i] - (unsigned char)s2[j]);
+	return (0);
 }

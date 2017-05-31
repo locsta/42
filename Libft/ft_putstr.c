@@ -6,7 +6,7 @@
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/13 09:04:17 by minizan           #+#    #+#             */
-/*   Updated: 2017/05/10 16:30:24 by minizan          ###   ########.fr       */
+/*   Updated: 2017/05/30 15:03:54 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr(char const *s)
 	int i;
 
 	i = 0;
+	if (s == NULL)
+		return ;
 	while (s[i] != '\0')
 	{
 		ft_putchar(s[i]);

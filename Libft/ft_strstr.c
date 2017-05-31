@@ -6,7 +6,7 @@
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/15 18:06:08 by minizan           #+#    #+#             */
-/*   Updated: 2017/05/10 15:18:22 by minizan          ###   ########.fr       */
+/*   Updated: 2017/05/30 14:48:56 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	int j;
 
 	i = 0;
+	if (*needle == '\0')
+		return ((char*)haystack);
 	while (haystack[i] != '\0')
 	{
 		j = 0;

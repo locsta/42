@@ -6,7 +6,7 @@
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/17 16:24:49 by minizan           #+#    #+#             */
-/*   Updated: 2017/05/26 16:08:10 by minizan          ###   ########.fr       */
+/*   Updated: 2017/05/30 12:34:27 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	t_list	*lsthead;
+	t_list	*head;
 
-	lsthead = *alst;
+	head = *alst;
 	*alst = new;
-	new->next = lsthead;
+	new->next = head;
 }

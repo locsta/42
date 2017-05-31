@@ -6,7 +6,7 @@
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/10 16:18:33 by minizan           #+#    #+#             */
-/*   Updated: 2017/05/10 16:25:32 by minizan          ###   ########.fr       */
+/*   Updated: 2017/05/30 15:05:58 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl(char const *s)
 {
+	if (s == NULL)
+		return ;
 	ft_putstr(s);
 	ft_putchar('\n');
 }
