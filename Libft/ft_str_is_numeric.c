@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_countwords.c                                    :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/26 16:05:00 by minizan           #+#    #+#             */
-/*   Updated: 2017/05/26 16:05:08 by minizan          ###   ########.fr       */
+/*   Created: 2017/03/16 14:21:01 by minizan           #+#    #+#             */
+/*   Updated: 2017/03/18 22:10:25 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_countwords(const char *str, char c)
+int		ft_str_is_numeric(char *str)
 {
-	int count;
 	int i;
 
 	i = 0;
-	count = 0;
-	while (str[i])
+	while (str[i] != '\0')
 	{
-		while (str[i] == c)
-			i++;
-		if (str[i] != c && str[i] != '\0')
-			count++;
-		while (str[i] != c && str[i] != '\0')
-			i++;
+		if (str[i] < 48 || str[i] > 57)
+		{
+			return (0);
+		}
+		i++;
 	}
-	return (count);
+	return (1);
 }

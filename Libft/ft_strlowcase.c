@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/17 16:28:35 by minizan           #+#    #+#             */
-/*   Updated: 2017/06/01 04:58:34 by minizan          ###   ########.fr       */
+/*   Created: 2017/03/16 11:22:08 by minizan           #+#    #+#             */
+/*   Updated: 2017/03/19 19:50:17 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+char	*ft_strlowcase(char *str)
 {
-	t_list	*map;
+	int i;
 
-	if (lst)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		map = f(lst);
-		map->next = ft_lstmap(lst->next, f);
-		return (map);
+		if (str[i] < 65 || str[i] > 90)
+		{
+			i++;
+		}
+		else if (str[i] >= 65 && str[i] <= 90)
+		{
+			str[i] = str[i] + 32;
+			i++;
+		}
+		else
+		{
+		}
 	}
-	return (NULL);
+	return (str);
 }

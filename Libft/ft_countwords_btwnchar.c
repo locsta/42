@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_countwords_btwnchar.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/17 16:28:35 by minizan           #+#    #+#             */
-/*   Updated: 2017/06/01 04:58:34 by minizan          ###   ########.fr       */
+/*   Created: 2017/06/01 05:00:19 by minizan           #+#    #+#             */
+/*   Updated: 2017/06/01 05:00:26 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+int		ft_countwords_btwnchar(const char *str, char c)
 {
-	t_list	*map;
+	int count;
+	int i;
 
-	if (lst)
+	i = 0;
+	count = 0;
+	while (str[i])
 	{
-		map = f(lst);
-		map->next = ft_lstmap(lst->next, f);
-		return (map);
+		while (str[i] == c)
+			i++;
+		if (str[i] != c && str[i] != '\0')
+			count++;
+		while (str[i] != c && str[i] != '\0')
+			i++;
 	}
-	return (NULL);
+	return (count);
 }

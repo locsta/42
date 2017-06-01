@@ -6,7 +6,7 @@
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/17 16:38:26 by minizan           #+#    #+#             */
-/*   Updated: 2017/05/26 16:16:00 by minizan          ###   ########.fr       */
+/*   Updated: 2017/06/01 05:00:55 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,12 @@ char	**ft_strsplit(char const *s, char c)
 	int		k;
 	char	**str;
 
-	if (!s || !(str = (char**)malloc(sizeof(str) * (ft_countwords(s, c) + 1))))
+	if (!s || !(str = (char**)malloc(sizeof(str) *
+					(ft_countwords_btwnchar(s, c) + 1))))
 		return (NULL);
 	i = -1;
 	j = 0;
-	while (++i < ft_countwords(s, c))
+	while (++i < ft_countwords_btwnchar(s, c))
 	{
 		k = 0;
 		if (!(str[i] = ft_strnew(ft_word_len(&s[j], c) + 1)))

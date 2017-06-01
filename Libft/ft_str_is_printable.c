@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/17 16:28:35 by minizan           #+#    #+#             */
-/*   Updated: 2017/06/01 04:58:34 by minizan          ###   ########.fr       */
+/*   Created: 2017/03/16 14:36:13 by minizan           #+#    #+#             */
+/*   Updated: 2017/03/18 22:12:48 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+int		ft_str_is_printable(char *str)
 {
-	t_list	*map;
+	int i;
 
-	if (lst)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		map = f(lst);
-		map->next = ft_lstmap(lst->next, f);
-		return (map);
+		if (str[i] < 32)
+		{
+			return (0);
+		}
+		i++;
 	}
-	return (NULL);
+	return (1);
 }

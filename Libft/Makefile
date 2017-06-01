@@ -6,7 +6,7 @@
 #    By: minizan <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/09 17:53:06 by minizan           #+#    #+#              #
-#    Updated: 2017/05/27 07:04:47 by minizan          ###   ########.fr        #
+#    Updated: 2017/06/01 05:26:56 by minizan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ CFLAGS	= -Wall -Werror -Wextra
 ### SOURCES ###
 SRC			= ft_atoi.c \
 			ft_bzero.c \
-			ft_countwords.c \
+			ft_countwords_btwnchar.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isascii.c \
@@ -78,6 +78,16 @@ SRC			= ft_atoi.c \
 			ft_strtrim.c \
 			ft_tolower.c \
 			ft_toupper.c \
+			ft_strupcase.c \
+			ft_strlowcase.c \
+			ft_strcapitalize.c \
+			ft_str_is_alpha.c \
+			ft_str_is_numeric.c \
+			ft_str_is_lowercase.c \
+			ft_str_is_uppercase.c \
+			ft_str_is_printable.c \
+			ft_str_to_lowercase.c \
+			ft_str_to_uppercase.c \
 			ft_word_len.c
 
 OBJ		= $(SRC:.c=.o)
@@ -98,9 +108,11 @@ WHITE		= \033[1;37m
 ### RULES ###
 
 $(NAME):$(OBJ)
+	@echo "$(GREEN)Compiling objects files into $(NAME) ...$(NOC)"
 	$(CC) $(CFLAGS) -c $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+	@echo "$(GREEN)$(NAME) has been created. $(NOC)"
 
 all: $(NAME)
 

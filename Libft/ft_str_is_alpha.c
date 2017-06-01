@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/17 16:28:35 by minizan           #+#    #+#             */
-/*   Updated: 2017/06/01 04:58:34 by minizan          ###   ########.fr       */
+/*   Created: 2017/03/16 14:01:55 by minizan           #+#    #+#             */
+/*   Updated: 2017/03/21 10:42:19 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+int		ft_str_is_alpha(char *str)
 {
-	t_list	*map;
+	int i;
 
-	if (lst)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		map = f(lst);
-		map->next = ft_lstmap(lst->next, f);
-		return (map);
+		if (str[i] < 65 || (str[i] > 90 && str[i] < 97) || str[i] > 122)
+		{
+			return (0);
+		}
+		i++;
 	}
-	return (NULL);
+	return (1);
 }

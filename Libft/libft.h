@@ -6,7 +6,7 @@
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/10 10:06:25 by minizan           #+#    #+#             */
-/*   Updated: 2017/05/31 17:22:21 by minizan          ###   ########.fr       */
+/*   Updated: 2017/06/01 05:00:01 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,16 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int				ft_islower(int c);
 int				ft_isupper(int c);
 int				ft_word_len(char const *str, char c);
-int				ft_countwords(char const *str, char c);
+int				ft_countwords_btwnchar(char const *str, char c);
+char			*ft_strupcase(char *str);
+char			*ft_strlowcase(char *str);
+char			*ft_strcapitalize(char *str);
+int				ft_str_is_alpha(char *str);
+int				ft_str_is_numeric(char *str);
+int				ft_str_is_lowercase(char *str);
+int				ft_str_is_uppercase(char *str);
+int				ft_str_is_printable(char *str);
+char			*ft_str_to_lowercase(char *str);
+char			*ft_str_to_uppercase(char *str);
 
 #endif
