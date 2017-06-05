@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_to_lowercase.c                              :+:      :+:    :+:   */
+/*   fillit.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/16 14:30:40 by minizan           #+#    #+#             */
-/*   Updated: 2017/06/01 04:39:04 by minizan          ###   ########.fr       */
+/*   Created: 2017/06/05 11:16:47 by minizan           #+#    #+#             */
+/*   Updated: 2017/06/05 11:17:20 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_str_to_lowercase(char *str)
+int main(int argc, const char *argv[])
 {
-	int i;
+	:
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-		{
-			str[i] = str[i] + 32;
-		}
-		i++;
-	}
-	return (str);
+	return (0);
 }

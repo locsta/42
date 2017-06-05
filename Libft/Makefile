@@ -6,7 +6,7 @@
 #    By: minizan <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/09 17:53:06 by minizan           #+#    #+#              #
-#    Updated: 2017/06/01 05:26:56 by minizan          ###   ########.fr        #
+#    Updated: 2017/06/01 17:11:07 by minizan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,7 +80,6 @@ SRC			= ft_atoi.c \
 			ft_toupper.c \
 			ft_strupcase.c \
 			ft_strlowcase.c \
-			ft_strcapitalize.c \
 			ft_str_is_alpha.c \
 			ft_str_is_numeric.c \
 			ft_str_is_lowercase.c \

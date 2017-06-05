@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_to_uppercase.c                              :+:      :+:    :+:   */
+/*   fillit.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: minizan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/16 14:30:40 by minizan           #+#    #+#             */
-/*   Updated: 2017/06/01 04:38:39 by minizan          ###   ########.fr       */
+/*   Created: 2017/06/05 11:17:29 by minizan           #+#    #+#             */
+/*   Updated: 2017/06/05 11:52:48 by minizan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FILLIT_H
+# define FILLIT_H
+# include <stdlib.h>
+# include <fcntl.h>
 
-char	*ft_str_to_uppercase(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] = str[i] - 32;
-		}
-		i++;
-	}
-	return (str);
-}
+#endif
